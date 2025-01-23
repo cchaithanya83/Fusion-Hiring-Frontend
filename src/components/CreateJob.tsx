@@ -41,10 +41,10 @@ const CreateJobMain: React.FC = () => {
               <React.Fragment key={index}>
                 <div className="flex items-center">
                   <div
-                    className={`w-8 h-8 flex items-center justify-center rounded-full font-bold ${
+                    className={`w-8 h-8 flex items-center justify-center rounded-full font-bold ml-2 mr-3 ${
                       currentStep === index + 1
-                        ? "bg-gray-800 text-white"
-                        : "bg-gray-300 text-gray-500"
+                        ? "bg-[#FD3995] text-white"
+                        : "bg-[#886AB5] text-gray-100"
                     }`}
                   >
                     {index + 1}
@@ -86,7 +86,7 @@ const CreateJobMain: React.FC = () => {
             </button>
             <button
               onClick={handleNext}
-              className="px-4 py-2 bg-gray-800 text-white font-bold rounded disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-4 py-2 bg-[#7454A7] text-white font-bold rounded disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Next
             </button>

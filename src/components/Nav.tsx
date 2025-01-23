@@ -7,7 +7,7 @@ function Navbar() {
   const [activePage, setActivePage] = useState("Dashboard");
 
   return (
-    <nav className="bg-gray-200 text-gray-800 shadow-md">
+    <nav className="bg-[#56327A] text-white text-gray-800 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -16,7 +16,7 @@ function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex space-x-6 ">
             {[
               "Dashboard",
               "Manage Jobs",
@@ -28,8 +28,8 @@ function Navbar() {
                 key={page}
                 className={`hover:text-gray-600 ${
                   activePage === page
-                    ? "border-b-2 border-gray-800 text-gray-800"
-                    : "text-gray-600"
+                    ? "border-b-2 border-white text-white"
+                    : "text-white"
                 }`}
                 onClick={() => setActivePage(page)}
               >
@@ -43,14 +43,14 @@ function Navbar() {
             <button className="bg-gray-300 px-4 py-2 rounded text-gray-800 hover:bg-gray-400">
               In Progress Candidates
             </button>
-            <button className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">
+            <button className="bg-[#56327A] border-2  text-white px-4 py-2 rounded hover:bg-gray-700">
               Create Job
             </button>
           </div>
 
           {/* Profile Dropdown and Icons */}
           <div className="flex items-center space-x-4">
-             <button className="text-gray-600 hover:text-gray-800">
+            <button className="text-white hover:text-gray-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -67,7 +67,7 @@ function Navbar() {
               </svg>
             </button>
 
-            <button className="text-gray-600 hover:text-gray-800">
+            <button className="text-white hover:text-gray-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -183,7 +183,7 @@ function Navbar() {
           <button className="block w-full px-3 py-2 text-left text-base font-medium text-gray-600 hover:bg-gray-300">
             In Progress Candidates
           </button>
-          <button className="block w-full px-3 py-2 text-left text-base font-medium text-gray-600 hover:bg-gray-300">
+          <button className="block w-full px-3 py-2  bg-[#56327A] text-left text-base font-medium text-gray-600 hover:bg-gray-300">
             Create Job
           </button>
         </div>
