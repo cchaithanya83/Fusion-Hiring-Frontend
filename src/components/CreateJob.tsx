@@ -61,9 +61,9 @@ const CreateJobMain: React.FC = () => {
                 </div>
                 {index < steps.length - 1 && (
                   <div
-                    className={`flex-1 border-t-2 ${
-                      currentStep > index + 1
-                        ? "border-gray-800"
+                    className={`ml-1 mr-1 flex-1 border-t-2 ${
+                      currentStep > index
+                        ? "border-gray-600"
                         : "border-dotted border-gray-300"
                     }`}
                   ></div>
