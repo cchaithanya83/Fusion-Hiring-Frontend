@@ -47,7 +47,12 @@ const CreateJobBasic = () => {
         />
 
         {/* Experience Range */}
-        <TwoPointSlider  name={"Experience Range"} upperValue={20} values={values} setValues={setValues} />
+        <TwoPointSlider
+          name={"Experience Range"}
+          upperValue={20}
+          values={values}
+          setValues={setValues}
+        />
 
         {/* Locations */}
         <div className="flex items-center justify-between">
