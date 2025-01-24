@@ -27,8 +27,8 @@ const TwoPointSlider = ({ name, upperValue, values, setValues }: any) => {
               background: `linear-gradient(
                 to right,
                 #d1d5db ${((values[0] - MIN) / (MAX - MIN)) * 100}%,
-                #3b82f6 ${((values[0] - MIN) / (MAX - MIN)) * 100}%,
-                #3b82f6 ${((values[1] - MIN) / (MAX - MIN)) * 100}%,
+                #555085 ${((values[0] - MIN) / (MAX - MIN)) * 100}%,
+                #555085 ${((values[1] - MIN) / (MAX - MIN)) * 100}%,
                 #d1d5db ${((values[1] - MIN) / (MAX - MIN)) * 100}%
               )`,
               borderRadius: "4px",
@@ -40,7 +40,7 @@ const TwoPointSlider = ({ name, upperValue, values, setValues }: any) => {
         renderThumb={({ props, index }) => (
           <div
             {...props}
-            className="w-4 h-4 bg-blue-500 rounded-full border-2 border-white shadow-md"
+            className="w-4 h-4 bg-[#555085] rounded-full border-2 border-white shadow-md"
             style={{ ...props.style }}
           >
             <div className="text-xs absolute top-6 -left-2 text-gray-700">

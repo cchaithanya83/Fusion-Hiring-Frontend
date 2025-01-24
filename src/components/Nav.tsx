@@ -1,15 +1,13 @@
 import { useState, Fragment } from "react";
-import { useNavigate } from "react-router-dom";
 import { Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 const Navbar = ({ currentactivePage }: any) => {
-  const navigate = useNavigate();
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activePage, setActivePage] = useState(currentactivePage);
 
   return (
-    <nav className="bg-[#56327A] text-white text-gray-800 shadow-md">
+    <nav className="bg-navBar-bg text-white text-gray-800 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -47,7 +45,7 @@ const Navbar = ({ currentactivePage }: any) => {
             <button className="bg-gray-300 px-4 py-2 rounded text-gray-800 hover:bg-gray-400">
               In Progress Candidates
             </button>
-            <button className="bg-[#56327A] border-2  text-white px-4 py-2 rounded hover:bg-gray-700">
+            <button className="bg-navBar-btn border-2  text-white px-4 py-2 rounded hover:bg-gray-700">
               Create Job
             </button>
           </div>

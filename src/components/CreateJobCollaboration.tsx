@@ -54,7 +54,7 @@ const CreateJobCollaboration: React.FC = () => {
   };
 
   return (
-    <div className="p-6 bg-white border rounded-md space-y-8 max-w-4xl mx-auto">
+    <div className="p-6  rounded-md space-y-8 max-w-4xl mx-auto">
       {/* My Team Section */}
       <div className="flex items-center space-x-4">
         <div className="flex-1">
@@ -98,7 +98,7 @@ const CreateJobCollaboration: React.FC = () => {
           </select>
           <button
             onClick={handleAddToTeam}
-            className="px-4 py-2   bg-indigo-500 w-full text-white text-sm rounded-md"
+            className="px-4 py-2   bg-[#555085] hover:bg-[#555080] w-full text-white text-sm rounded-md"
           >
             Add to Team
           </button>
@@ -112,7 +112,7 @@ const CreateJobCollaboration: React.FC = () => {
             >
               <PersonLogo />
               <span className="w-full ml-10">{member.name}</span>
-              <div className="flex w-full items-center space-x-8"> 
+              <div className="flex w-full items-center space-x-8">
                 <span className="w-full">{member.role}</span>
                 <button
                   onClick={() => handleRemoveMember(index)}
@@ -202,7 +202,7 @@ const CreateJobCollaboration: React.FC = () => {
           </select>
           <button
             onClick={addApproverToList}
-            className="col-span-1 px-4  bg-blue-500 text-white rounded-md"
+            className="col-span-1 px-4  bg-[#555085] text-white rounded-md"
           >
             Add to Team
           </button>

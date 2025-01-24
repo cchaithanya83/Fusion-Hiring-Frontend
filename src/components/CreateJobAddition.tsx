@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import TwoPointSlider from "../utils/TwoPointSlider";
 
 function CreateJobAddition() {
@@ -7,7 +7,7 @@ function CreateJobAddition() {
   const [addTags, setAddTags] = useState("");
   const [age, setAge] = useState<number | undefined>(undefined);
   const [gender, setGender] = useState<string>("");
-
+  console.log(NoticePeriod, values, addTags, age, gender);
   return (
     <div className="w-full max-w-4xl mx-auto p-6 rounded-lg">
       <div className="space-y-6">

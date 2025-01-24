@@ -17,7 +17,7 @@ const CreateJobGoLive: React.FC = () => {
 
   return (
     <div className="p-6 space-y-6">
-      <div className="bg-white rounded-2xl shadow-lg p-6">
+      <div className="bg-white rounded-2xl p-6">
         <h2 className="text-xl font-semibold mb-4">
           Ask Co-workers for Referrals
         </h2>
@@ -63,15 +63,15 @@ const CreateJobGoLive: React.FC = () => {
         <h2 className="text-xl font-semibold mb-4">
           Share this Job on Social Network
         </h2>
-        <div className="flex gap-4">
+        <div className="flex gap-4  text-blue-500">
           <button className="flex items-center gap-2 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-100">
             <svg
-              className="w-5 h-5 text-blue-700"
               xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
               viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-5 h-5"
             >
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-3 19h-3v-6h-2v6h-3v-10h3v2h2v-2h3v10zm-7-13h2v-2h-2v2zm8 0h2v-2h-2v2z" />
+              <path d="M22.23 0H1.77A1.77 1.77 0 000 1.77v20.46A1.77 1.77 0 001.77 24h20.46A1.77 1.77 0 0024 22.23V1.77A1.77 1.77 0 0022.23 0zM7.12 20.46H3.56V9h3.56v11.46zM5.34 7.51a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM20.46 20.46h-3.56v-5.62c0-1.34-.03-3.07-1.88-3.07-1.88 0-2.17 1.47-2.17 2.99v5.7H9.3V9h3.42v1.56h.05a3.75 3.75 0 013.38-1.86c3.62 0 4.29 2.38 4.29 5.47v6.29z" />
             </svg>
             LinkedIn
           </button>

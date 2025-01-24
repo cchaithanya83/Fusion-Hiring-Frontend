@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ExperienceSlider from "../utils/TwoPointSlider";
 import SkillsInput from "../utils/CreateJobBasicExperienceSkillInputs";
 import TwoPointSlider from "../utils/TwoPointSlider";
 

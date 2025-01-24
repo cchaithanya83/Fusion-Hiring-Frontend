@@ -4,9 +4,7 @@ import CreateJobAddition from "../components/CreateJobAddition";
 import NavBar from "../components/Nav";
 import CreateJobCollaboration from "../components/CreateJobCollaboration";
 import CreateJobGoLive from "../components/CreateJobGoLive";
-const YetToDevelop: React.FC = () => (
-  <div className="text-center p-8 text-xl font-bold ">Yet to develop!</div>
-);
+
 
 const CreateJobMain: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -28,8 +26,7 @@ const CreateJobMain: React.FC = () => {
       setCurrentStep((prevStep) => prevStep - 1);
     }
   };
-  const [showScheduleModal, setShowScheduleModal] = useState(false);
-  // State for Schedule Publish Modal
+
   const [publishDate, setPublishDate] = useState("");
   const [publishTime, setPublishTime] = useState("");
   const [isPopoverVisible, setPopoverVisible] = useState(false);
@@ -47,19 +44,19 @@ const CreateJobMain: React.FC = () => {
   return (
     <div className="items-center">
       <NavBar currentactivePage={"Manage Jobs"} />
-      <div className="flex flex-col items-center bg-gray-200">
+      <div className="flex  flex-col items-center bg-[#ffff6]">
         <div className="w-full max-w-4xl mt-6">
           <h1 className="text-l font-bold mb-6 mt-3 p-3 md:p-2 lg:p-0">
             Create Job
           </h1>
-          <div className="bg-white rounded-lg shadow-lg">
+          <div className="bg-white rounded-lg shadow border-1 border-gray-500">
             {/* Stepper */}
-            <div className="hidden sm:flex items-center p-5 shadow">
+            <div className="flex sm:flex-row items-center p-5  ">
               {steps.map((step, index) => (
                 <React.Fragment key={index}>
                   <div className="flex items-center">
                     <div
-                      className={`w-8 h-8 flex items-center justify-center rounded-full font-bold ml-2 mr-1 ${
+                      className={`w-8 h-8 flex items-center justify-center rounded-full font-bold ml-2 mr-1  ${
                         currentStep >= index + 1
                           ? "bg-[#FD3995] text-white"
                           : "bg-gray-400 text-gray-100"
@@ -82,7 +79,7 @@ const CreateJobMain: React.FC = () => {
                       )}
                     </div>
                     <span
-                      className={`ml-2 font-medium mr-1 ${
+                      className={` ml-2 font-medium mr-1 hidden sm:block ${
                         currentStep === index + 1
                           ? "text-gray-800"
                           : "text-gray-500"
@@ -93,9 +90,9 @@ const CreateJobMain: React.FC = () => {
                   </div>
                   {index < steps.length - 1 && (
                     <div
-                      className={`ml-1 mr-1 flex-1 border-t-2 ${
+                      className={`ml-1 mr-1 flex-1 border-t-2  ${
                         currentStep > index + 1
-                          ? "border-gray-600"
+                          ? "border-[#555085]"
                           : "border-dotted border-gray-300"
                       }`}
                     ></div>
@@ -119,7 +116,7 @@ const CreateJobMain: React.FC = () => {
                 </button>
                 <button
                   onClick={handleNext}
-                  className="px-4 py-2 bg-[#7454A7] text-white font-bold rounded disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-4 py-2 bg-[#555085] text-white font-bold rounded disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Next
                 </button>
@@ -169,7 +166,7 @@ const CreateJobMain: React.FC = () => {
             {currentStep == 3 && (
               <div className="flex inline-block item center justify-center mb-4 p-4 shadow">
                 <button
-                  className="px-6 py-2 bg-blue-700 text-white rounded-md mr-4 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium"
+                  className="px-6 py-2 bg-[#555085] text-white rounded-md mr-4 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium"
                   onClick={handleNext}
                 >
                   Publish
@@ -177,7 +174,7 @@ const CreateJobMain: React.FC = () => {
                 {/* Schedule Publish Button */}
                 <button
                   onClick={togglePopover}
-                  className="text-white  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="text-white  bg-[#555085] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Schedule Publish
                 </button>
