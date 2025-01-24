@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import PersonLogo from "../utils/SvgLogo";
 const CreateJobCollaboration: React.FC = () => {
   const [teamMembers, setTeamMembers] = useState<
     { name: string; role: string }[]
@@ -35,8 +35,6 @@ const CreateJobCollaboration: React.FC = () => {
   );
   const [newApprover, setNewApprover] = useState({ name: "", role: "" });
 
-
-
   // Add a new approver to the list
   const addApproverToList = () => {
     if (newApprover.name && newApprover.role) {
@@ -44,8 +42,6 @@ const CreateJobCollaboration: React.FC = () => {
       setNewApprover({ name: "", role: "" });
     }
   };
-
-
 
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
@@ -102,7 +98,7 @@ const CreateJobCollaboration: React.FC = () => {
           </select>
           <button
             onClick={handleAddToTeam}
-            className="px-4 py-2 bg-indigo-500 w-full text-white text-sm rounded-md"
+            className="px-4 py-2   bg-indigo-500 w-full text-white text-sm rounded-md"
           >
             Add to Team
           </button>
@@ -112,14 +108,15 @@ const CreateJobCollaboration: React.FC = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="flex items-center justify-between p-3 bg-gray-50 border rounded-md"
+              className="flex   p-3 bg-gray-50 border rounded-md"
             >
-              <span>{member.name}</span>
-              <div className="flex items-center space-x-4">
-                <span>{member.role}</span>
+              <PersonLogo />
+              <span className="w-full ml-10">{member.name}</span>
+              <div className="flex w-full items-center space-x-8"> 
+                <span className="w-full">{member.role}</span>
                 <button
                   onClick={() => handleRemoveMember(index)}
-                  className="text-red-500"
+                  className="text-red-500 pl-6"
                 >
                   X
                 </button>
@@ -217,46 +214,7 @@ const CreateJobCollaboration: React.FC = () => {
             key={index}
             className="flex items-center justify-between px-4 py-2 bg-gray-100 rounded-md"
           >
-            <div className="w-9 h-9  bg-gray-300 rounded-full pl-2 pr-2 np-1 flex items-center justify-center text-gray-600 font-semibold">
-              <svg
-                width="64px"
-                height="64px"
-                viewBox="-0.5 0 64 64"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="#000000"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  {" "}
-                  <title>Person</title> <desc>Created with Sketch.</desc>{" "}
-                  <defs> </defs>{" "}
-                  <g
-                    id="Page-1"
-                    stroke="none"
-                    stroke-width="1"
-                    fill="none"
-                    fill-rule="evenodd"
-                  >
-                    {" "}
-                    <path
-                      d="M41.6,44.3 C39,43 35.6,40.6 35.6,38.5 C35.6,37.4 36,36.7 36.4,36.5 C41.4,33.7 43.1,24.5 43.4,24.5 C45.1,24.5 46.3,20.2 46.3,17.4 C46.3,15.1 45.6,15.2 44.4,14.5 L44.4,14.2 C44.4,6.7 38.5,1 31.1,1 C23.8,1 17.5,7 17.5,14.4 L17.5,14.7 C16.3,15.4 15.8,15.8 15.8,18 C15.8,20.9 16.8,24.9 18.5,24.9 C18.8,24.9 21,33.7 25.8,36.7 C26.1,36.9 26.6,37.4 26.6,38.4 C26.6,40.8 23.4,42.9 20.7,44.3 C17.4,46 1,47.4 1,63 L61,63 C61,47.4 45.7,46.4 41.6,44.3 L41.6,44.3 Z"
-                      id="Person"
-                      stroke="#6B6C6E"
-                      stroke-width="2"
-                    >
-                      {" "}
-                    </path>{" "}
-                  </g>{" "}
-                </g>
-              </svg>
-            </div>
-
+            <PersonLogo />
             <div className="text-sm font-medium text-gray-800  w-full ml-7">
               {approver.name}
             </div>

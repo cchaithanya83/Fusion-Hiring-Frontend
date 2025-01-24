@@ -3,6 +3,7 @@ import CreateJobBasic from "../components/CreateJobBasic";
 import CreateJobAddition from "../components/CreateJobAddition";
 import NavBar from "../components/Nav";
 import CreateJobCollaboration from "../components/CreateJobCollaboration";
+import CreateJobGoLive from "../components/CreateJobGoLive";
 const YetToDevelop: React.FC = () => (
   <div className="text-center p-8 text-xl font-bold ">Yet to develop!</div>
 );
@@ -15,7 +16,7 @@ const CreateJobMain: React.FC = () => {
     <CreateJobBasic />,
     <CreateJobAddition />,
     <CreateJobCollaboration />,
-    <YetToDevelop />,
+    <CreateJobGoLive />,
   ];
 
   const handleNext = () => {
