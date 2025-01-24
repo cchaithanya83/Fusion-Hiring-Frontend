@@ -28,7 +28,7 @@ const Navbar = ({ currentactivePage }: any) => {
             ].map((page) => (
               <button
                 key={page}
-                className={`hover:text-gray-600 ${
+                className={`hover:text-gray-400 ${
                   activePage === page
                     ? "border-b-2 border-white text-white"
                     : "text-white"
@@ -150,7 +150,7 @@ const Navbar = ({ currentactivePage }: any) => {
           {/* Hamburger Menu for Mobile */}
           <div className="md:hidden">
             <button
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-800 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-400"
+              className="inline-flex items-center justify-center p-2 rounded-md  hover:text-gray-800 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-400"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? (
@@ -171,9 +171,7 @@ const Navbar = ({ currentactivePage }: any) => {
               <button
                 key={page}
                 className={`block w-full px-3 py-2 text-left text-base font-medium ${
-                  activePage === page
-                    ? "border-b-2 border-gray-800 text-gray-800"
-                    : "text-gray-600"
+                  activePage === page ? "border-b-2 border-gray-800 " : ""
                 } hover:bg-gray-300`}
                 onClick={() => {
                   setActivePage(page);
@@ -184,10 +182,10 @@ const Navbar = ({ currentactivePage }: any) => {
               </button>
             )
           )}
-          <button className="block w-full px-3 py-2 text-left text-base font-medium text-gray-600 hover:bg-gray-300">
+          <button className="block w-full px-3 py-2 text-left text-base font-medium  hover:bg-gray-300">
             In Progress Candidates
           </button>
-          <button className="block w-full px-3 py-2  bg-[#56327A] text-left text-base font-medium text-gray-600 hover:bg-gray-300">
+          <button className="block w-full px-3 py-2  bg-[#56327A] text-left text-base font-medium  hover:bg-gray-300">
             Create Job
           </button>
         </div>
