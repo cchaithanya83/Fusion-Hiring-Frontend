@@ -2,16 +2,15 @@
 
 import { Range } from "react-range";
 
-
-const ExperienceSlider = ({ values, setValues }: any) => {
+const TwoPointSlider = ({ name, upperValue, values, setValues }: any) => {
   const STEP = 1;
   const MIN = 0;
-  const MAX = 50;
+  const MAX = upperValue;
 
   return (
     <div>
       <label className="block text-gray-700 font-medium mb-4">
-        Experience Range: {values[0]} - {values[1]} years
+        {name}: {values[0]} - {values[1]} years
       </label>
       <Range
         values={values}
@@ -58,4 +57,4 @@ const ExperienceSlider = ({ values, setValues }: any) => {
   );
 };
 
-export default ExperienceSlider;
+export default TwoPointSlider;

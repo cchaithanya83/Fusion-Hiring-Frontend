@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/createjob.tsx","./src/components/nav.tsx","./src/components/model/createjobbasic.tsx","./src/components/utils/createjobbasicexperienceskillinputs.tsx","./src/components/utils/createjobbasicexperienceslider.tsx","./src/pages/createjob.tsx"],"version":"5.7.3"}

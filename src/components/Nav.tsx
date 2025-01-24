@@ -1,10 +1,12 @@
 import { useState, Fragment } from "react";
+import { useNavigate } from "react-router-dom";
 import { Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+const Navbar = ({ currentactivePage }: any) => {
+  const navigate = useNavigate();
 
-function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activePage, setActivePage] = useState("Dashboard");
+  const [activePage, setActivePage] = useState(currentactivePage);
 
   return (
     <nav className="bg-[#56327A] text-white text-gray-800 shadow-md">
@@ -31,7 +33,9 @@ function Navbar() {
                     ? "border-b-2 border-white text-white"
                     : "text-white"
                 }`}
-                onClick={() => setActivePage(page)}
+                onClick={() => {
+                  // navigate("/" + page.toLowerCase().replace(" ", "-"));
+                }}
               >
                 {page}
               </button>
@@ -190,6 +194,6 @@ function Navbar() {
       )}
     </nav>
   );
-}
+};
 
 export default Navbar;

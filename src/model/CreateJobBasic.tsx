@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import ExperienceSlider from "../utils/CreateJobBasicExperienceSlider";
+import { useState } from "react";
+import ExperienceSlider from "../utils/TwoPointSlider";
 import SkillsInput from "../utils/CreateJobBasicExperienceSkillInputs";
+import TwoPointSlider from "../utils/TwoPointSlider";
 
 const CreateJobBasic = () => {
   const [jobTitle, setJobTitle] = useState("");
@@ -10,9 +11,7 @@ const CreateJobBasic = () => {
   const [locations, setLocations] = useState([
     { jobLocation: "", positions: "", vendor: "", client: "" },
   ]);
-  const [employmentType, setEmploymentType] = useState("");
   const [description, setDescription] = useState("");
-  const [requisition_iD, setRequisitionID] = useState("");
 
   const deleteLocation = (index: number) => {
     setLocations(locations.filter((_, i) => i !== index));
@@ -48,7 +47,7 @@ const CreateJobBasic = () => {
         />
 
         {/* Experience Range */}
-        <ExperienceSlider values={values} setValues={setValues} />
+        <TwoPointSlider  name={"Experience Range"} upperValue={20} values={values} setValues={setValues} />
 
         {/* Locations */}
         <div className="flex items-center justify-between">
@@ -141,12 +140,7 @@ const CreateJobBasic = () => {
             {["Full Time", "Part Time", "Contractor / Consultant"].map(
               (type) => (
                 <label key={type} className="flex items-center space-x-2">
-                  <input
-                    type="radio"
-                    name="employment"
-                    value={type}
-                    onChange={(e) => setEmploymentType(e.target.value)}
-                  />
+                  <input type="radio" name="employment" value={type} />
                   <span>{type}</span>
                 </label>
               )
@@ -174,7 +168,6 @@ const CreateJobBasic = () => {
           </label>
           <textarea
             rows={1}
-            onChange={(e) => setRequisitionID(e.target.value)}
             className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
           ></textarea>
         </div>

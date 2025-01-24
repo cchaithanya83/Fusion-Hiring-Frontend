@@ -1,21 +1,20 @@
 import React, { useState } from "react";
-import CreateJobBasic from "./model/CreateJobBasic";
+import CreateJobBasic from "../model/CreateJobBasic";
+import CreateJobAddition from "../model/CreateJobAddition";
 
-const CreateJobAdditional: React.FC = () => <div>Additional Step Content</div>;
-const CreateJobCollaboration: React.FC = () => (
-  <div>Collaboration Step Content</div>
+const YetToDevelop: React.FC = () => (
+  <div className="text-center p-8 text-xl font-bold ">Yet to develop!</div>
 );
-const CreateJobGoLive: React.FC = () => <div>Go Live Step Content</div>;
+
 const CreateJobMain: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(1);
 
   const steps = ["Basic", "Additional", "Collaboration", "Go Live"];
   const stepComponents = [
     <CreateJobBasic />,
-
-    <CreateJobAdditional />,
-    <CreateJobCollaboration />,
-    <CreateJobGoLive />,
+    <CreateJobAddition />,
+    <YetToDevelop />,
+    <YetToDevelop />,
   ];
 
   const handleNext = () => {
@@ -41,16 +40,16 @@ const CreateJobMain: React.FC = () => {
               <React.Fragment key={index}>
                 <div className="flex items-center">
                   <div
-                    className={`w-8 h-8 flex items-center justify-center rounded-full font-bold ml-2 mr-3 ${
-                      currentStep === index + 1
+                    className={`w-8 h-8 flex items-center justify-center rounded-full font-bold ml-2 mr-1 ${
+                      currentStep >= index + 1
                         ? "bg-[#FD3995] text-white"
-                        : "bg-[#886AB5] text-gray-100"
+                        : "bg-gray-400 text-gray-100"
                     }`}
                   >
                     {index + 1}
                   </div>
                   <span
-                    className={`ml-2 font-medium ${
+                    className={`ml-2 font-medium mr-1 ${
                       currentStep === index + 1
                         ? "text-gray-800"
                         : "text-gray-500"
@@ -62,7 +61,7 @@ const CreateJobMain: React.FC = () => {
                 {index < steps.length - 1 && (
                   <div
                     className={`ml-1 mr-1 flex-1 border-t-2 ${
-                      currentStep > index
+                      currentStep > index + 1
                         ? "border-gray-600"
                         : "border-dotted border-gray-300"
                     }`}

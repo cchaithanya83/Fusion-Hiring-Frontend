@@ -4,7 +4,7 @@ import NavBar from "../components/Nav";
 function Createjob() {
   return (
     <div className="items-center">
-      <NavBar />
+      <NavBar currentactivePage={"Manage Jobs"} />
       <CreateJobMain />
     </div>
   );
