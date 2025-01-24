@@ -59,12 +59,12 @@ const CreateJobGoLive: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-lg p-6">
+      <div className="bg-white  w-full rounded-2xl shadow-lg p-3">
         <h2 className="text-xl font-semibold mb-4">
           Share this Job on Social Network
         </h2>
-        <div className="flex gap-4  text-blue-500">
-          <button className="flex items-center gap-2 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-100">
+        <div className="flex gap-3 text-blue-500">
+          <button className="flex items-center gap-1 border border-gray-300 px-2 py-2 rounded-lg hover:bg-gray-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -75,7 +75,7 @@ const CreateJobGoLive: React.FC = () => {
             </svg>
             LinkedIn
           </button>
-          <button className="flex items-center gap-2 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-100">
+          <button className="flex items-center gap-1 border border-gray-300 px-2 py-2 rounded-lg hover:bg-gray-100">
             <svg
               className="w-5 h-5 text-blue-500"
               xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@ const CreateJobGoLive: React.FC = () => {
             </svg>
             Twitter
           </button>
-          <button className="flex items-center gap-2 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-100">
+          <button className="flex items-center gap-1 border border-gray-300 px-2 py-2 rounded-lg hover:bg-gray-100">
             <svg
               className="w-5 h-5 text-blue-600"
               xmlns="http://www.w3.org/2000/svg"
