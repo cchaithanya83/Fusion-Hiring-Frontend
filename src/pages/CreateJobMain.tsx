@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import CreateJobBasic from "../components/CreateJobBasic";
 import CreateJobAddition from "../components/CreateJobAddition";
-import NavBar from "../components/Nav";
+import NavBar from "../shared_component/Nav";
 import CreateJobCollaboration from "../components/CreateJobCollaboration";
 import CreateJobGoLive from "../components/CreateJobGoLive";
-
 
 const CreateJobMain: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -110,7 +109,7 @@ const CreateJobMain: React.FC = () => {
                 <button
                   onClick={handlePrevious}
                   disabled={currentStep === 1}
-                  className="px-4 py-2 bg-gray-300 text-gray-600 font-bold rounded disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-4 py-2  bg-gray-300 text-gray-600 font-bold rounded disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Previous
                 </button>

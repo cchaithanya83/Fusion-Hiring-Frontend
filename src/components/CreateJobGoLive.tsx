@@ -14,6 +14,8 @@ const CreateJobGoLive: React.FC = () => {
   const removeCoworker = (name: string) => {
     setCoworkers(coworkers.filter((coworker) => coworker !== name));
   };
+  const jobBoardsLink =
+    "https://mail.google.com/mail/u/1/#inbox/FMfcgxwCgzlGPmDJWjXxX";
 
   return (
     <div className="p-6 space-y-6">
@@ -63,7 +65,7 @@ const CreateJobGoLive: React.FC = () => {
         <h2 className="text-xl font-semibold mb-4">
           Share this Job on Social Network
         </h2>
-        <div className="flex gap-3 text-blue-500">
+        <div className="flex gap-1 text-blue-500">
           <button className="flex items-center gap-1 border border-gray-300 px-2 py-2 rounded-lg hover:bg-gray-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -107,20 +109,18 @@ const CreateJobGoLive: React.FC = () => {
         <div className="flex items-center gap-2">
           <input
             type="text"
-            value="https://mail.google.com/mail/u/1/#inbox/FMfcgxwCgzlGPmDJWjXxX"
+            value={jobBoardsLink}
             readOnly
             className="flex-grow border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <button
-            className="border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-100"
+            className="border border-gray-300 px-4 rounded-lg py-2 hover:bg-gray-100"
             onClick={() => {
-              navigator.clipboard.writeText(
-                "https://mail.google.com/mail/u/1/#inbox/FMfcgxwCgzlGPmDJWjXxX"
-              );
+              navigator.clipboard.writeText(jobBoardsLink);
               alert("Copied to clipboard");
             }}
           >
-            Copy Link
+            Copy
           </button>
         </div>
       </div>
